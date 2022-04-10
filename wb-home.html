@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WriteBetter</title>
+		
+		<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+		<script>
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-149349011-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+		
+	</head>
+
+	<body style="display:none;">
+
+	<div id="centerMain">
+		
+		<div id="bar2" class="bar">
+			<div class="functionButton factive" id="Contexts">Context</div>
+			<div class="functionButton" id="Dictionary">Dictionary</div>
+			<div class="functionButton" id="Translate">Translator</div>	
+
+			
+		</div>
+
+		<div id="bar1" class="bar">
+		
+			<a href="https://writebetter.io" target="_blank" style="text-decoration:none;"><div id="logo">WriteBetter</div></a>
+
+			<div id="search">
+				<textarea autocapitalize="off" autocomplete="off" spellcheck="false" autocorrect="off" placeholder="Search" id="searchField"></textarea>
+			</div>
+			
+
+		</div>
+		
+
+		
+		<div id="barContexts" class="bar">
+			<div id="suggestions"><label class="container">Suggestions while writing<input id="liveSuggestions" type="checkbox" checked="checked">  <span class="checkmark"></span>	</label></div>
+			
+			<div id="barContainer">
+			<div id="barTranslate">
+			  <select id="translateLanguages">
+
+
+			  </select>
+			</div>
+			</div>
+			<div id="orderingResults">Sort of results</div> 
+			<div class="functionButton" id="Help">Help</div>
+
+			
+		</div>
+		
+		<div id="barAlternativeContexts" class="bar">
+			<div id="infoBox">
+				<p id="messageAlternatives">This combination of words seems to be unusual.</p>
+				<span id="alternativesList">Explore alternatives</span>
+			</div>
+			<div id="alertBox"></div>
+		</div>
+		<div id="didYouMean" class="bar"></div>
+		
+		<div id="searchSuggestions">
+
+		</div>
+		
+		<div id="suggestionContainer"></div>
+		
+
+		
+		<div id="fullScreenLoading"><p id="loadingMsg"><p><p id="loadingProblems">Problems? <span>Restart Writebetter</span><p></div>
+		
+		<div id="serverError"><p>Please check your connectivity. <br /> Internet may not work or our service is currently unavailable.</p><div id="startAgain">Restart</div></div>
+			
+			
+			<div id="orderingUI">
+			<h2>Sort of results</h2>
+			
+			
+			
+			<p class="selectionOrdering">
+				<input type="radio" id="wq-option" name="selector">
+				<label for="wq-option">Writing quality </label><span>You will see first results for users who want to check language.</span></p>
+				
+			<p class="selectionOrdering">
+				<input type="radio" id="tl-option" name="selector">
+				<label for="tl-option">Technical language </label><span>You will see first results for users who want to see how to use technical terms.</span></p>
+				
+			
+			  <p id="messageOrdering">Reordering results...</p>
+			  
+			  <p id="cancelOrdering">Cancel</p>
+			  
+
+
+			
+			</div>
+			
+			
+			
+		<div id="userPage">
+		
+			<div id="topbarUser">
+			
+			<div id="closeUserPage"></div>
+			
+			</div>
+			
+			<h3 id="userPageTitle"></h3>
+		
+			<div id="registration">
+			
+			<p id="rMessage"></p>
+			
+
+			 <input type="text" id="rname" placeholder="Name" required><br>
+			 <span class="validation" id="validityRName">Your name is required. Use alphanumeric characters: a-z; A-Z<br></span> 
+			  <input type="email" id="remail" placeholder="E-mail address" required><br>
+			  <span class="validation" id="validityREmail">The e-mail address is not valid <br> </span>
+			   <input type="password" id="rpassword" pattern=".{6,}" name="fpassword" placeholder="Password" required><br>
+			   <span class="validation" id="validityRPassword">The password should have at least 6 characters<br></span>
+			   <input type="password" id="rdpassword" pattern=".{6,}" name="rfpassword" placeholder="Repeat password" required><br>
+			   <span class="validation" id="validityRDPassword">The password does not match <br></span> 
+
+			   <input id="rgo" type="submit" value="Next">
+			   
+			
+			   <p id="alreadyRegistered">Already have an account?</p>
+			
+			</div>
+			<div id="login">
+			
+			<p id="lMessage"></p>
+			
+	
+			
+			 <input type="email" id="lemail" placeholder="E-mail address" required><br>
+			 <span class="validation" id="validityLEmail">The e-mail address is not valid<br></span> 
+			   <input type="password" id="lpassword" pattern=".{6,}" name="fpassword" placeholder="Password" required><br>
+			   <span class="validation" id="validityLPassword">The password seems not to be valid<br></span> 
+			   
+			   
+			   <div id="remember">
+				<div class="control-group">
+					<label class="control control-checkbox">
+						
+							<input id="rememberAccount" type="checkbox" /> Keep me signed in
+						<div class="control_indicator"></div>
+					</label>
+				</div>
+			</div>
+			
+			<input id="lgo" type="submit" value="Login" >
+			
+
+				<p id="forgotPassword">Forgot password?</p>
+			   
+			   <p id="noAccount">Don't have an account?</p>
+			
+			</div>
+			
+			
+			<div id="forgotPasswordForm">
+			
+				<p id="fMessage"></p>
+				<input type="email" id="femail" placeholder="E-mail address" required><br>
+				<span class="validation" id="validityFEmail">The e-mail address is not valid<br></span> 
+
+				<input id="fgo" type="submit" value="Next" >
+
+				<p id="forgotLogin">Log in</p>
+			
+			</div>
+			
+			<div id="logged">
+			
+				<p id="accName"></p>
+				<p id="accType"></p>
+				<p id="accExpiration"></p>
+				
+				<input id="logout" type="submit" value="Logout" >
+			
+			</div>
+			
+		</div>
+		
+		
+		
+		<div id="centerMessage"></div>
+		
+		<div id="correctionNavigator">
+		
+			<div id="topbarNavigator">
+				<h3 id="navigatorTitle">Explore solutions</h3>
+				<div id="closeNavigator"></div>
+			</div>
+
+		</div>
+		
+		<div id="resultsNavigator"></div>
+		
+		<div id="chromeMessageAddin">
+		<p>In some websites WriteBetter may not work. <a target="_blank" href="https://writebetter.io/#contact">Contact us</a> for asking to add your favourite site.</p>
+		<p id="chromeMessageAddinAlternative">Alternatively, you could type your text in the search field above.</p>
+		<p id="chromeMessageAddinClose">Close</p>
+		</div>
+		
+
+	</div>	
+		
+	
+	</body>
+	
+	<link rel="stylesheet" href="app-static/css/academic-basic-style.css?3">
+	<link rel="stylesheet" href="app-static/css/academic-examples.css?3">
+	<script src="app-static/js/academic-writebetter-basic.js?x"></script>
+
+
+</html>
